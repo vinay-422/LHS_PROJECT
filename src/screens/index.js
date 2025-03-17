@@ -1,0 +1,6 @@
+export { default as Splash } from './Splash'
+export { default as Walkthrough } from './Auth/Walkthrough'
+export { default as Login } from './Auth/Login'
+export { default as ForgotPass } from './Auth/ForgotPass'
+export { default as ResetPass } from './Auth/ResetPass'
+export { default as Otp } from './Auth/Otp'
