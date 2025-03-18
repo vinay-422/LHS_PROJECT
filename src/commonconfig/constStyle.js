@@ -71,7 +71,7 @@ export const CSS_STYLES = StyleSheet.create({
   lineStyle: {
     borderBottomWidth: 1,
     marginVertical: 5,
-    borderColor: '#DEDEDE',
+    borderColor: 'rgba(0,0,0,.2)',
   },
   shadow: {
     shadowColor: '#fff',

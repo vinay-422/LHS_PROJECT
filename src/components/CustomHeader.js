@@ -20,7 +20,7 @@ export default function CustomHeader({
     renderRight,
 }) {
     // const Orientation = useOrientation();
-const {theme}=useTheme();
+    const { theme } = useTheme();
     return (
         <View
             style={[
@@ -43,7 +43,7 @@ const {theme}=useTheme();
                             height: 25,
                             width: 25,
                             resizeMode: 'contain',
-                            tintColor:theme.text,
+                            // tintColor: theme.theme,
                             ...leftImageStyle,
                         }}
                         // source={require(home)}
@@ -53,14 +53,14 @@ const {theme}=useTheme();
             </TouchableOpacity>
             {renderLeft ? renderLeft() : null}
 
-            <View style={[{ flex: 1 }, titleContainer]}>
+            <View style={[{ flex: 1 }, (leftImage && !rightImage) && { marginRight: 25 }, titleContainer]}>
                 {titleImage ? (
                     <Image style={{ position: 'absolute', top: -25, alignSelf: 'center', height: 25, width: 25, resizeMode: 'contain', ...titleImageStyle, }}
                         source={titleImage}
                     />
                 ) : null}
                 {title ? <Text
-                    style={[FONT_STYLES.hb22, { color: theme.text, fontWeight: 'bold', textAlign: 'center', }, FONT_STYLES?.hsb9, titleStyle,]}>
+                    style={[FONT_STYLES.hb16, { color: theme.text, fontWeight: 'bold', textAlign: 'center', }, FONT_STYLES?.hsb9, titleStyle,]}>
                     {title}
                 </Text> : null}
                 {titlewithImage ? <TouchableOpacity
@@ -73,17 +73,17 @@ const {theme}=useTheme();
                 </TouchableOpacity> : null}
                 {renderTitle ? renderTitle() : null}
                 {subtitle ? <Text
-                    style={[FONT_STYLES.h11, { fontWeight: 'bold', textAlign: 'center' }, subtitleStyle,]}>
+                    style={[FONT_STYLES.h12, { fontWeight: 'bold', textAlign: 'center' }, subtitleStyle,]}>
                     {subtitle}
                 </Text> : null}
             </View>
-            {rightImage ? (<TouchableOpacity style={[{ marginLeft: '5%', }, rightContainer]} onPress={onPressRight}>
+            {rightImage ? (<TouchableOpacity style={[{}, rightContainer]} onPress={onPressRight}>
 
                 <Image style={{ height: 40, width: 40, resizeMode: 'contain', ...rightImageStyle, }}
                     source={rightImage} />
 
             </TouchableOpacity>) : null}
-            {rightText ? (<TouchableOpacity style={[{ marginLeft: '5%', }, rightContainer]} onPress={onPressRightText}>
+            {rightText ? (<TouchableOpacity style={[{}, rightContainer]} onPress={onPressRightText}>
 
                 <Text style={[FONT_STYLES.h13, { fontWeight: 'bold', textAlign: 'center' },]} >{rightText}</Text>
 

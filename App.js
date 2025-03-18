@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import MyStack from './src/navigation/MyStack';
 import { ThemeProvider } from './src/commonconfig/ThemeContext';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import CustomStatusBar from './src/components/CustomStatusbar';
 // import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function App() {
@@ -19,15 +20,15 @@ export default function App() {
   // }, [])
 
   return (
-    <SafeAreaView style={{ flex: 1, }}>
-      <StatusBar barStyle="dark-content"/>
+    // <CustomStatusBar >
+    
       <NavigationContainer >
         <ThemeProvider>
           <MyStack />
           {/* {data ? <MyStack/>: <AuthStack />} */}
         </ThemeProvider>
       </NavigationContainer>
-    </SafeAreaView>
+    // </CustomStatusBar>
   )
 }
 

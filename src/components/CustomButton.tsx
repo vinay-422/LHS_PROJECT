@@ -41,7 +41,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
             disabled={disabled}
             // style={[style]}
             onPress={onPress}
-            style={[styles.navBtn, border && styles.borderStyle, style]}
+            style={[styles.navBtn,disabled&&{opacity:.5}, border && styles.borderStyle, style]}
 
         >
             {/*  <LinearGradient
