@@ -1,4 +1,4 @@
-import { Alerts, Home, Sidebar,CompleteKyc, Attendence, Visit } from '../screens';
+import { Alerts, Home, Sidebar,CompleteKyc, Attendence, Visit, AddStore, Add_editProduct } from '../screens';
 import AuthStack from './AuthStack';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -15,6 +15,8 @@ export default function MyStack() {
       <Stack.Screen name='CompleteKyc' component={CompleteKyc} />
       <Stack.Screen name='Attendence' component={Attendence} />
       <Stack.Screen name='Visit' component={Visit} />
+      <Stack.Screen name='AddStore' component={AddStore} />
+      <Stack.Screen name='Add_editProduct' component={Add_editProduct} />
 
 
       <Stack.Screen name='Sidebar' component={Sidebar} />
