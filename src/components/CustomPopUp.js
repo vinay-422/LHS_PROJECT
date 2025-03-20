@@ -92,7 +92,7 @@ const CustomPopUp = ({
           style={[styles.container, {}, componentContainer]}>
 
           {cross ? <TouchableOpacity onPress={() => onClose()} style={[{ alignSelf: 'flex-end', }, crossContainer]}>
-            <Image source={images.close} style={{ height: 20, width: 20, resizeMode: 'contain', tintColor:'#DF2025' }} />
+            <Image source={images.cross} style={{ height: 20, width: 20, resizeMode: 'contain',}} />
           </TouchableOpacity> : null}
           {/* // <LinearGradient colors={[THEME_COLOR, THEME_COLOR]}
             //   start={{ x: 0, y: 0 }}

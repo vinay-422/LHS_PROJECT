@@ -87,6 +87,7 @@ export const UploadCard = ({
 };
 
 export const AttendenceCard = ({
+  heading1, heading2,
   inoutTimeHead,
   absent1,
   absent2, absentStyle,
@@ -98,16 +99,16 @@ export const AttendenceCard = ({
   outLocation,
   earlyText, earlyStyle,
   date, dateStyle,
-  inPress,
-  outPress,
+  btn1title, inPress,
+  btn2title, outPress,
   children
 }) => {
   const { theme } = useTheme();
   return (
     <View style={{ backgroundColor: theme.bgGray, borderRadius: 10, paddingHorizontal: 10, paddingVertical: 10, marginBottom: 10 }}>
       <View style={{ flex: 1, ...CSS_STYLES.cf2 }}>
-        <Text style={[{ textAlign: 'center', flex: 1, ...FONT_STYLES.h10, opacity: .4 }, inoutTimeHead]}>Time In</Text>
-        <Text style={[{ textAlign: 'center', flex: 1, ...FONT_STYLES.h10, opacity: .4 }, inoutTimeHead]}>Time Out</Text>
+        <Text style={[{ textAlign: 'center', flex: 1, ...FONT_STYLES.h10, opacity: .4 }, inoutTimeHead]}>{heading1 ? heading1 : "Time In"}</Text>
+        <Text style={[{ textAlign: 'center', flex: 1, ...FONT_STYLES.h10, opacity: .4 }, inoutTimeHead]}>{heading2 ? heading2 : "Time Out"}</Text>
       </View>
       <View style={{ flex: 1, ...CSS_STYLES.cf2, marginTop: 15 }}>
         <View style={{ flex: 1, ...CSS_STYLES.cf1, }}>
@@ -117,7 +118,7 @@ export const AttendenceCard = ({
               <Text style={[{ textAlign: 'center', flex: 1, ...FONT_STYLES.hb11, marginTop: 10 }, inOutTimeStyle]}>{inTime}</Text>
               <Text style={[{ textAlign: 'center', flex: 1, ...FONT_STYLES.h10, opacity: .6 }, inOutLocStyle]}>{inLocation}</Text>
             </View>
-              : <CustomButton title='TimeIn' onPress={inPress} style={{ paddingVertical: 5, alignSelf: 'center' }} />}
+              : <CustomButton title={btn1title ? btn1title : 'TimeIn'} onPress={inPress} style={{ paddingVertical: 5, alignSelf: 'center' }} />}
         </View>
         {/* seprator line */}
         <View style={{ width: 1, backgroundColor: 'rgba(0,0,0,.2)', height: '100%', minHeight: 60 }} />
@@ -128,7 +129,7 @@ export const AttendenceCard = ({
               <Text style={[{ textAlign: 'center', flex: 1, ...FONT_STYLES.hb11, marginTop: 10 }, inOutTimeStyle]}>{outTime}</Text>
               <Text style={[{ textAlign: 'center', flex: 1, ...FONT_STYLES.h10, opacity: .6 }, inOutLocStyle]}>{outLocation}</Text>
             </View>
-              : <CustomButton title='TimeOut' disabled={!inTime} onPress={outPress} style={{ paddingVertical: 5, alignSelf: 'center' }} />}
+              : <CustomButton title={btn2title ? btn2title : 'TimeOut'} disabled={!inTime} onPress={outPress} style={{ paddingVertical: 5, alignSelf: 'center' }} />}
         </View>
       </View>
       <View style={{ marginTop: 20 }}>
@@ -140,6 +141,41 @@ export const AttendenceCard = ({
   )
 }
 
+export const StoreHeader = ({
+  containerStyle,
+  storeName,
+  storeAddress,
+}) => {
+  const { theme } = useTheme();
+  return (
+    <View style={[CSS_STYLES.c1, {},containerStyle]}>
+      <View style={{ padding: 15, borderRadius: 50, backgroundColor: LIGHT_THEME }}>
+        <Image source={images.store2} style={[CSS_STYLES.i4, {}]} />
+      </View>
+      <Text style={[FONT_STYLES.hb14, { color: THEME_COLOR, textAlign: 'center', marginTop: 5, }]}>{storeName}</Text>
+      <Text style={[FONT_STYLES.h12, { marginTop: 5, textAlign: 'center' }]}>{storeAddress}</Text>
+    </View>
+  )
+}
+export const StoreDetailcard = ({
+  storeName, storeName2,
+  storeAddress,
+  onViewAllPress,
+}) => {
+  const { theme } = useTheme();
+  return (
+    <View style={[{ backgroundColor: theme.bgGray, borderRadius: 15, paddingHorizontal: 20, paddingVertical: 15, marginTop: 10 }]}>
+      <Text style={[FONT_STYLES.hb14, { opacity: 1 }]}>{storeName} <Text style={[{ color: 'rgba(0,0,0,.3)' }]}> {storeName2}</Text></Text>
+      <Text style={[FONT_STYLES.h12, { marginTop: 5, marginBottom: 8 }]}>{storeAddress}</Text>
+      <TouchableOpacity
+        onPress={onViewAllPress}
+        style={[{ gap: 5, flexDirection: 'row', alignItems: 'center' }]} >
+        <Text style={[FONT_STYLES.hbs12, { color: THEME_COLOR }]}>View Full Details</Text>
+        <Image source={images.back} style={[CSS_STYLES.i15, { transform: [{ rotate: '180deg' }], tintColor: THEME_COLOR }]} />
+      </TouchableOpacity>
+    </View>
+  )
+}
 
 
 

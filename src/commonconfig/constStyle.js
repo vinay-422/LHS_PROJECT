@@ -1,5 +1,6 @@
 
 import { StyleSheet } from 'react-native';
+import AppFonts from './AppFonts';
 
 
 export const THEME_COLOR = '#EF7F2D';
@@ -8,31 +9,31 @@ export const LIGHT_THEME = 'rgba(239, 127, 45, .4)';
 
 export const FONT_STYLES = {
 
-  hb30: { fontFamily: 'Poppins-Regular', fontSize: 30, color: '#000', fontWeight: 'bold', },
-  hb22: { fontFamily: 'Poppins-Regular', fontSize: 22, color: '#000000', fontWeight: 'bold', },
-  hb20: { fontFamily: 'Poppins-Regular', fontSize: 20, color: '#000000', fontWeight: 'bold', },
-  hb18: { fontFamily: 'Poppins-Regular', fontSize: 18, color: '#000000', fontWeight: 'bold', },
-  hb16: { fontFamily: 'Poppins-Regular', fontSize: 16, color: '#000000', fontWeight: 'bold', },
-  hb14: { fontFamily: 'Poppins-Regular', fontSize: 14, color: '#000000', fontWeight: 'bold', },
-  hb13: { fontFamily: 'Poppins-Regular', fontSize: 13, color: '#000000', fontWeight: 'bold', },
-  hb11: { fontFamily: 'Poppins-Medium', fontSize: 11, color: '#000000', fontWeight: 'bold', },
+  hb30: { fontFamily: AppFonts.monExtraBold, fontSize: 30, color: '#000', },
+  hb22: { fontFamily: AppFonts.monExtraBold, fontSize: 22, color: '#000000', },
+  hb20: { fontFamily: AppFonts.monExtraBold, fontSize: 20, color: '#000000', },
+  hb18: { fontFamily: AppFonts.monExtraBold, fontSize: 18, color: '#000000', },
+  hb16: { fontFamily: AppFonts.monExtraBold, fontSize: 16, color: '#000000', },
+  hb14: { fontFamily: AppFonts.monExtraBold, fontSize: 14, color: '#000000', },
+  hb13: { fontFamily: AppFonts.monExtraBold, fontSize: 13, color: '#000000', },
+  hb11: { fontFamily: AppFonts.monExtraBold, fontSize: 11, color: '#000000', },
 
-  hsb20: { fontFamily: 'Poppins-Regular', fontSize: 20, color: '#000000', fontWeight: '500', },
-  hsb16: { fontFamily: 'Poppins-Regular', fontSize: 16, color: '#000000', fontWeight: '500', },
-  hbs14: { fontFamily: 'Poppins-Regular', fontSize: 14, color: '#fff', fontWeight: '500' },
-  hbs13: { fontFamily: 'Poppins-Regular', fontSize: 13, color: '#000000', fontWeight: '500', },
-  hbs12: { fontFamily: 'Poppins-Regular', fontSize: 12, color: '#000000', fontWeight: '500', },
-  hbs11: { fontFamily: 'Poppins-Regular', fontSize: 11, color: '#333131', },
+  hsb20: { fontFamily: AppFonts.monSemiBold, fontSize: 20, color: '#000000', },
+  hsb16: { fontFamily: AppFonts.monSemiBold, fontSize: 16, color: '#000000', },
+  hbs14: { fontFamily: AppFonts.monSemiBold, fontSize: 14, color: '#000', },
+  hbs13: { fontFamily: AppFonts.monSemiBold, fontSize: 13, color: '#000000', },
+  hbs12: { fontFamily: AppFonts.monSemiBold, fontSize: 12, color: '#000000', },
+  hbs11: { fontFamily: AppFonts.monSemiBold, fontSize: 11, color: '#333131', },
 
-  h30: { fontFamily: 'Poppins-Regular', fontSize: 30, color: '#000000' },
-  h20: { fontFamily: 'Poppins-Regular', fontSize: 20, color: '#fff' },
-  h18: { fontFamily: 'Poppins-Regular', fontSize: 18, color: '#fff', },
-  h17: { fontFamily: 'Poppins-Regular', fontSize: 17, color: '#000000' },
-  h15: { fontFamily: 'Poppins-Medium', fontSize: 15, color: '#000000', },
-  h14: { fontFamily: 'Poppins-Regular', fontSize: 14, color: '#fff', },
-  h13: { fontFamily: 'Poppins-Regular', fontSize: 13, color: '#000000' },
-  h12: { fontFamily: 'Poppins-Regular', fontSize: 12, color: '#000000' },
-  h10: { fontFamily: 'Poppins-Regular', fontSize: 10, color: '#000000' },
+  h30: { fontFamily: AppFonts.monLight, fontSize: 30, color: '#000000' },
+  h20: { fontFamily: AppFonts.monLight, fontSize: 20, color: '#000' },
+  h18: { fontFamily: AppFonts.monLight, fontSize: 18, color: '#000', },
+  h17: { fontFamily: AppFonts.monLight, fontSize: 17, color: '#000000' },
+  h15: { fontFamily: AppFonts.monLight, fontSize: 15, color: '#000000', },
+  h14: { fontFamily: AppFonts.monLight, fontSize: 14, color: '#000', },
+  h13: { fontFamily: AppFonts.monLight, fontSize: 13, color: '#000000' },
+  h12: { fontFamily: AppFonts.monLight, fontSize: 12, color: '#000000' },
+  h10: { fontFamily: AppFonts.monLight, fontSize: 10, color: '#000000' },
 }
 export const CSS_STYLES = StyleSheet.create({
   c1: { alignItems: 'center', justifyContent: 'center', },
@@ -109,10 +110,10 @@ export const CSS_STYLES = StyleSheet.create({
 
   },
   heading: {
-    ...FONT_STYLES.hb5,
-    color: '#000000',
-    marginBottom: 10,
-    fontWeight: '900',
+    ...FONT_STYLES.h14,
+    color: THEME_COLOR,
+    marginTop: 10,
+    marginBottom: 5
   },
 });
 

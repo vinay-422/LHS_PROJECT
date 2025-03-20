@@ -7,6 +7,8 @@ export { default as Otp } from './Auth/Otp';
 
 export { default as Sidebar } from './sidebar/Sidebar'
 export { default as Alerts } from './sidebar/Alerts'
+export { default as MyBeatPlan } from './sidebar/MyBeatPlan'
+export { default as StoreDetail } from './sidebar/StoreDetail'
 
 export { default as Home } from './Home/Home'
 export { default as CompleteKyc } from './Home/CompleteKyc'

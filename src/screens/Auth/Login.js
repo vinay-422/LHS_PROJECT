@@ -8,7 +8,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 const Login = ({navigation}) => {
     return (
-        <SafeAreaView style={{ paddingHorizontal: 30, backgroundColor: '#fff' }}>
+        <SafeAreaView style={{flex:1, paddingHorizontal: 30, backgroundColor: '#fff' }}>
             <Image source={images.logo} style={styles.logo} />
             <Text style={styles.Heading}>Login</Text>
             <CustomInput placeholder={'Email address'} />
