@@ -56,7 +56,7 @@ const Sidebar = ({ navigation }) => {
                 <TouchableItems text={'Beat plan'}
                     containerStyle={styles.itemContainer}
                     textStyle={[FONT_STYLES.hb16, { color: '#fff' }]}
-                    onPress={() => { navigation.navigate("") }} />
+                    onPress={() => { navigation.navigate("MyBeatPlan") }} />
                 <TouchableItems text={'Help'}
                     containerStyle={styles.itemContainer}
                     textStyle={[FONT_STYLES.hb16, { color: '#fff' }]}

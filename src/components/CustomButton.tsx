@@ -41,7 +41,7 @@ const CustomButton: React.FC<CustomButtonProps> = ({
             disabled={disabled}
             // style={[style]}
             onPress={onPress}
-            style={[styles.navBtn,disabled&&{opacity:.5}, border && styles.borderStyle, style]}
+            style={[styles.navBtn, disabled && { opacity: .5 }, border && styles.borderStyle, style]}
 
         >
             {/*  <LinearGradient
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     },
     borderStyle: {
         borderWidth: 1,
-        borderColor: LIGHT_THEME,
+        borderColor: THEME_COLOR,
         backgroundColor: 'transparent',
     },
     navBtn: {
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         paddingVertical: 15,
-        paddingHorizontal:20,
+        paddingHorizontal: 20,
         borderRadius: 40,
     },
     loadingContainer: {
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     borderTitle: {
-        color: LIGHT_THEME,
+        color: THEME_COLOR,
         fontWeight: '500',
     },
 

@@ -5,6 +5,7 @@ import MyStack from './src/navigation/MyStack';
 import { ThemeProvider } from './src/commonconfig/ThemeContext';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import CustomStatusBar from './src/components/CustomStatusbar';
+import AuthStack from './src/navigation/AuthStack';
 // import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function App() {
@@ -24,7 +25,8 @@ export default function App() {
     
       <NavigationContainer >
         <ThemeProvider>
-          <MyStack />
+          {/* <AuthStack /> */}
+          <MyStack/>
           {/* {data ? <MyStack/>: <AuthStack />} */}
         </ThemeProvider>
       </NavigationContainer>

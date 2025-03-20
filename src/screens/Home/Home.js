@@ -40,6 +40,7 @@ const Home = ({navigation}) => {
                 <HomeCard heading={'My Beat Plan'}
                     value={'Random text lorem ipsum dolro lorem lore ipsumdor loremh elroem'}
                     image={images.task}
+                    onPress={()=>{navigation.navigate('MyBeatPlan')}}
                     valueStyle={{ marginTop: 5, opacity: .8, lineHeight: 16 }} />
                 <HomeCard heading={'Reporting'}
                     value={'Random text lorem ipsum dolro lorem lore ipsumdor loremh elroem'}
